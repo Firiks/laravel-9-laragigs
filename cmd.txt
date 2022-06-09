@@ -1,0 +1,16 @@
+# install ide helper
+composer require --dev barryvdh/laravel-ide-helper
+
+# add this to package.json
+"scripts": {
+    "post-update-cmd": [
+        "Illuminate\\Foundation\\ComposerScripts::postUpdate",
+        "@php artisan ide-helper:generate",
+        "@php artisan ide-helper:meta"
+    ]
+},
+
+# ide helper generate
+php artisan ide-helper:generate - PHPDoc generation for Laravel Facades
+php artisan ide-helper:models - PHPDocs for models
+php artisan ide-helper:meta - PhpStorm Meta file
