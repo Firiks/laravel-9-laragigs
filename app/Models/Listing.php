@@ -13,7 +13,7 @@ class Listing extends Model
     protected $fillable = ['title', 'company', 'location', 'website', 'email', 'description', 'tags', 'logo']; // mass assigment
 
   /**
-   * Undocumented function
+   * Scope filter by tag or search
    *
    * @param Illuminate\Database\Eloquent\Builder $query
    * @param array $filters
